@@ -1,0 +1,9 @@
+name: Invincible
+version: '1.0-SNAPSHOT'
+main: winlyps.invincible.Invincible
+api-version: '1.20'
+authors: [ Winlyps ]
+commands:
+  invincible:
+    description: Toggle invincibility for a player
+    usage: /invincible <player> <on/off>

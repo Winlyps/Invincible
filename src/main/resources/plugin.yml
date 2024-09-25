@@ -7,3 +7,8 @@ commands:
   invincible:
     description: Toggle invincibility for a player
     usage: /invincible <player> <on/off>
+    permission: invincible.use
+permissions:
+  invincible.use:
+    description: Allows the use of the /invincible command
+    default: op

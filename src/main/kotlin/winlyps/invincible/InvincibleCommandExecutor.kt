@@ -10,6 +10,12 @@ import org.bukkit.entity.Player
 class InvincibleCommandExecutor(private val plugin: Invincible) : CommandExecutor, TabCompleter {
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
+        // Check if the sender has the required permission
+        if (!sender.hasPermission("invincible.use")) {
+            sender.sendMessage("You do not have permission to use this command.")
+            return true
+        }
+
         if (args.size != 2) {
             sender.sendMessage("Usage: /invincible <player> <on/off>")
             return false
